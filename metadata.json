@@ -1,0 +1,6 @@
+{
+  "name": "Learn English! — Kids Learning App",
+  "description": "A colorful, interactive English learning app for children ages 3 to 8 with bilingual Persian flashcards and four playful educational games.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Soft pastel gradient background (sky blue to lavender to warm sunshine) -->
+    <path android:pathData="M0,0 L108,0 L108,108 L0,108 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:endX="108"
+                android:endY="108"
+                android:startX="0"
+                android:startY="0"
+                android:type="linear">
+                <item
+                    android:color="#FFBAE6FD"
+                    android:offset="0.0" />
+                <item
+                    android:color="#FFE9D5FF"
+                    android:offset="0.55" />
+                <item
+                    android:color="#FFFEF3C7"
+                    android:offset="1.0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Subtle soft pastel glow circles -->
+    <path
+        android:fillColor="#44FFFFFF"
+        android:pathData="M54,54m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0" />
+    <path
+        android:fillColor="#33FFFFFF"
+        android:pathData="M24,26m-14,0a14,14 0,1 1,28 0a14,14 0,1 1,-28 0" />
+    <path
+        android:fillColor="#33FDE68A"
+        android:pathData="M84,82m-16,0a16,16 0,1 1,32 0a16,16 0,1 1,-32 0" />
+</vector>
