@@ -10,31 +10,27 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '20'
+        node-version: '22'
 
     - name: Install dependencies
-      run: npm install --legacy-peer-deps
+      run: npm install
 
     - name: Build Web App
       run: npm run build
 
-    # این خط جدید اضافه شده تا ابزار Capacitor نصب بشه
-    - name: Install Capacitor CLI
-      run: npm install @capacitor/cli@latest @capacitor/core@latest
-
-    - name: Setup JDK 17
+    - name: Setup JDK 21
       uses: actions/setup-java@v4
       with:
-        java-version: '17'
+        java-version: '21'
         distribution: 'temurin'
 
     - name: Sync Capacitor
-      run: npx cap sync android
+      run: npx -y @capacitor/cli@latest sync android
 
     - name: Build Android APK
       run: |
         cd android
-        gradle wrapper
+        if [ ! -f gradlew ]; then gradle wrapper; fi
         chmod +x gradlew
         ./gradlew assembleDebug
 
